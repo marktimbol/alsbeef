@@ -13,36 +13,70 @@
         <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
+
+        <div id="wrapper">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+{{--                     <li class="sidebar-brand">
                         <h1 class="site-title">
                             <a href="/">
                                 <img src="/images/logo.png" alt="Al's Beef Dubai" title="Al's Beef Dubai" />
                             </a>
                         </h1>
+                    </li> --}}
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#">Shortcuts</a>
+                    </li>
+                    <li>
+                        <a href="#">Overview</a>
+                    </li>
+                    <li>
+                        <a href="#">Events</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-                        <div class="Search__container pull-right">
-                            <nav class="cl-effect-5">
-                                <a href="#"><span data-hover="Home">Home</span></a>
-                                <a href="#"><span data-hover="Menu">Menu</span></a>
-                                <a href="#"><span data-hover="Stores">Stores</span></a>
-                                <a href="#"><span data-hover="About">About</span></a>
-                                <a href="#"><span data-hover="Contact">Contact</span></a>
-{{--                                 <a href="#" class="Search">
-                                    <i class="fa fa-search fa-2x"></i>
-                                </a> --}}
-                            </nav>
+            <div id="page-content-wrapper">
+                <header>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1 class="site-title">
+                                    <a href="/">
+                                        <img src="/images/logo.png" alt="Al's Beef Dubai" title="Al's Beef Dubai" />
+                                    </a>
+                                </h1>
 
+                                <div class="Search__container pull-right">
+                                    <nav class="cl-effect-5">
+                                        <a href="#"><span data-hover="Home">Home</span></a>
+                                        <a href="#"><span data-hover="Menu">Menu</span></a>
+                                        <a href="#"><span data-hover="Stores">Stores</span></a>
+                                        <a href="#"><span data-hover="About">About</span></a>
+                                        <a href="#"><span data-hover="Contact">Contact</span></a>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </header>
+                </header>
 
-        @yield('content')
-        
+                @yield('content')   
+            </div>
+        </div>
+
         <script src="{{ elixir('js/app.js') }}"></script>
         @yield('footer_scripts')
     </body>

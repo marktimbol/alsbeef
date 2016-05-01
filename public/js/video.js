@@ -6,7 +6,7 @@ $(window).resize(fullscreen);
 function fullscreen() {
 	var Video = $('.Video');
 	var windowH = $(window).height();
-	var windowW = $(window).width();
+	var windowW = $('#page-content-wrapper').width();
 
 	Video.width(windowW);
 	Video.height(windowH);

@@ -1,6 +1,7 @@
 @extends('layouts.public')
 
 @section('content')
+
     <section class="Video">
         <video class="Video__item" autoplay loop muted poster="/videos/alsbeef.jpg">
             <source src="/videos/alsbeef.mp4" type="video/mp4">

@@ -6772,7 +6772,7 @@ header {
     margin: 0;
     padding-top: 20px; }
   header .Search__container {
-    top: -40px;
+    top: -30px;
     position: relative; }
   header .Search {
     color: white; }
@@ -6787,7 +6787,7 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
-  font-size: 1.35em; }
+  font-size: 1.1em; }
 
 nav a:hover,
 nav a:focus {

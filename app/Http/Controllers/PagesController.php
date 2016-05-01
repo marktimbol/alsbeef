@@ -10,6 +10,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-    	return view('public.home');
+    	$pageTitle = 'Home';
+    	return view('public.home', compact('pageTitle'));
     }
 }

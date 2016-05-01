@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
-
+var bowersPath = '../../../bower_components/';
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -12,5 +12,29 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss', 'resources/assets/css/app.css')
+    	.styles([
+    		bowersPath + 'bootstrap/dist/css/bootstrap.css',
+    		'app.css',
+    	], 'public/css/app.css')
+
+    	.scripts([
+    		bowersPath + 'jquery/dist/jquery.js',
+    		bowersPath + 'bootstrap/dist/js/bootstrap.js'
+    	], 'public/js/app.js')
+
+        .scripts([
+            bowersPath + 'covervid/covervid.min.js',
+            'Video.js'
+        ], 'public/js/video.js')
+
+    	.copy('bower_components/bootstrap/dist/fonts', 'public/build/fonts')
+
+    	.version([
+    		'public/css/app.css',
+    		'public/js/app.js',
+
+            'public/js/video.js',
+
+    	]);
 });

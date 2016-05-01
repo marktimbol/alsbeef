@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+
+/**
+ * Auth
+ */
+Route::auth();
+Route::get('/home', 'HomeController@index');

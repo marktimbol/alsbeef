@@ -17,33 +17,29 @@
         <div id="wrapper">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
-{{--                     <li class="sidebar-brand">
-                        <h1 class="site-title">
-                            <a href="/">
-                                <img src="/images/logo.png" alt="Al's Beef Dubai" title="Al's Beef Dubai" />
-                            </a>
-                        </h1>
-                    </li> --}}
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="#">
+                            <i class="fa fa-cutlery fa-3x"></i>
+                            <span>Menu</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="#">Shortcuts</a>
+                        <a href="#">
+                            <i class="fa fa-map-marker fa-3x"></i>
+                            <span>Stores</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="#">Overview</a>
+                        <a href="#">
+                            <i class="fa fa-info fa-3x"></i>
+                            <span>About</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
+                        <a href="#">
+                            <i class="fa fa-phone fa-3x"></i>
+                            <span>Contact</span>
+                        </a>
                     </li>
                 </ul>
             </div>

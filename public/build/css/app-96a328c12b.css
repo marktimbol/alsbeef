@@ -6821,10 +6821,6 @@ header {
   padding: 0;
   list-style: none; }
 
-.sidebar-nav li {
-  text-indent: 20px;
-  line-height: 40px; }
-
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
@@ -6865,6 +6861,35 @@ header {
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0; } }
+
+.sidebar-nav li {
+  text-align: center;
+  margin: 40px 0px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .sidebar-nav li a {
+    color: #ddd; }
+    .sidebar-nav li a i {
+      color: #ddd;
+      margin-bottom: 10px; }
+    .sidebar-nav li a:hover {
+      background: none;
+      text-decoration: none;
+      color: yellow; }
+      .sidebar-nav li a:hover i {
+        color: yellow; }
+    .sidebar-nav li a span {
+      display: block; }
 
 nav a {
   position: relative;

@@ -25,7 +25,7 @@
                         </h1>
                     </li>
                     <li>
-                        <a href="{{ route('menu') }}">
+                        <a href="{{ route('menus.index') }}">
                             <i class="fa fa-cutlery fa-3x"></i>
                             <span>Menu</span>
                         </a>
@@ -60,7 +60,7 @@
                                 <div class="TopNav pull-right">
                                     <nav class="cl-effect-5">
                                         <a href="{{ route('home') }}"><span data-hover="Home">Home</span></a>
-                                        <a href="{{ route('menu') }}"><span data-hover="Menu">Menu</span></a>
+                                        <a href="{{ route('menus.index') }}"><span data-hover="Menu">Menu</span></a>
                                         <a href="#"><span data-hover="Stores">Stores</span></a>
                                         <a href="#"><span data-hover="About">About</span></a>
                                         <a href="#"><span data-hover="Contact">Contact</span></a>

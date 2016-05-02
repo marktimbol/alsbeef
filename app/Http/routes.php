@@ -12,7 +12,8 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
-Route::get('/menu', ['as' => 'menu', 'uses' => 'PagesController@menu']);
+Route::get('/menus', ['as' => 'menus.index', 'uses' => 'MenusController@index']);
+Route::get('/menus/{menus}', ['as' => 'menus.show', 'uses' => 'MenusController@show']);
 
 /**
  * Auth

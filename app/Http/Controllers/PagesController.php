@@ -13,10 +13,4 @@ class PagesController extends Controller
     	$pageTitle = 'Home';
     	return view('public.home', compact('pageTitle'));
     }
-
-    public function menu()
-    {
-    	$pageTitle = 'Menu';
-    	return view('public.menu', compact('pageTitle'));
-    }
 }

@@ -5,12 +5,10 @@
         <div class="Parallax">
             <div class="Page__header--bg Parallax__item">
                 <div class="Page__header">  
-                    <div class="SearchContainer">
-                        <div class="form-group">
-                            <label>What are you looking for?</label>
-                            <input type="text" name="search" class="form-control input-lg" placeholder="Sandwich, Burger, Hot Dogs" />
-                        </div>
-                    </div>   
+                    <div class="form-group">
+                        <label>What are you looking for?</label>
+                        <input type="text" name="search" class="form-control input-lg" placeholder="Sandwich, Burger, Hot Dogs" />
+                    </div>
                 </div>
             </div>
 
@@ -24,7 +22,7 @@
                         @foreach( range(1, 12) as $index )
                         <div class="col-md-4 col-xs-12">
                             <div class="Card">
-                                <a href="#" class="Card__link">
+                                <a href="{{ route('menus.show', 1) }}" class="Card__link">
                                     <div class="Card__image">
                                         <img src="/images/menus/bacon.jpg" alt="" title="" class="img-responsive" />
                                     </div>

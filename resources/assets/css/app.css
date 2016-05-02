@@ -1,5 +1,6 @@
 body {
-  font-family: 'Lato'; }
+  font-family: 'Lato';
+  background: url("../../images/texture-bg.jpg") repeat; }
 
 .margin-top-20 {
   margin-top: 20px; }
@@ -7,14 +8,9 @@ body {
 header {
   position: relative;
   z-index: 9999; }
-  header h1 {
-    margin: 0;
-    padding-top: 20px; }
-  header .Search__container {
-    top: -30px;
+  header .TopNav {
+    top: 20px;
     position: relative; }
-  header .Search {
-    color: white; }
 
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
@@ -41,7 +37,7 @@ header {
   transition: all 0.5s ease; }
 
 #wrapper.toggled #sidebar-wrapper {
-  width: 150px; }
+  width: 125px; }
 
 #page-content-wrapper {
   width: 100%;
@@ -55,7 +51,7 @@ header {
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 150px;
+  width: 125px;
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -88,11 +84,11 @@ header {
 
 @media (min-width: 768px) {
   #wrapper {
-    padding-left: 150px; }
+    padding-left: 125px; }
   #wrapper.toggled {
     padding-left: 0; }
   #sidebar-wrapper {
-    width: 150px; }
+    width: 125px; }
   #wrapper.toggled #sidebar-wrapper {
     width: 0; }
   #page-content-wrapper {
@@ -116,6 +112,8 @@ header {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  .sidebar-nav li:first-child {
+    margin-top: 20px; }
   .sidebar-nav li a {
     color: #ddd; }
     .sidebar-nav li a i {
@@ -174,12 +172,10 @@ nav a:focus {
 
 .Card {
   width: 100%;
-  position: relative; }
+  position: relative;
+  margin-bottom: 10px; }
 
-.Card__image img {
-  width: 100%; }
-
-.Card__content {
+.Card--text-inside .Card__content {
   top: 0;
   width: 100%;
   height: 100%;
@@ -198,18 +194,33 @@ nav a:focus {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.Card__title {
+.Card--text-inside .Card__title {
   color: white;
   font-size: 30px;
   text-transform: uppercase;
-  margin-bottom: 20px;
   text-shadow: 1px 1px 3px #333; }
 
-.Card__description {
+.Card--text-inside .Card__description {
   color: white;
   font-size: 22px;
-  text-align: center;
   text-shadow: 1px 1px 3px #333; }
+
+.Card__link {
+  display: block; }
+
+.Card__image img {
+  width: 100%; }
+
+.Card__title {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px; }
+
+.Card__description {
+  color: #333;
+  font-size: 16px;
+  text-align: center; }
 
 .Card__action {
   margin-top: 30px; }
@@ -274,5 +285,43 @@ nav a:focus {
     width: 80%;
     padding: 50px;
     border: 3px solid yellow; }
+
+.Page {
+  margin-top: -21px; }
+
+.Page__header--bg {
+  width: 100%;
+  height: 300px;
+  background: url("../../images/foods-bg.jpg") no-repeat; }
+
+.Page__header {
+  height: 100%; }
+  .Page__header .SearchContainer {
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .Page__header .SearchContainer .form-group {
+      width: 40%;
+      text-align: center; }
+      .Page__header .SearchContainer .form-group label {
+        color: white;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px #333; }
+
+.Page__title {
+  text-align: center;
+  margin: 30px 0px; }
+
+.Menus .Card {
+  margin-bottom: 70px; }
 
 /*# sourceMappingURL=app.css.map */

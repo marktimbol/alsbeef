@@ -18,7 +18,14 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="#">
+                        <h1 class="site-title">
+                            <a href="{{ route('home') }}">
+                                <img src="/images/logo.png" alt="Al's Beef Dubai" title="Al's Beef Dubai" />
+                            </a>
+                        </h1>
+                    </li>
+                    <li>
+                        <a href="{{ route('menu') }}">
                             <i class="fa fa-cutlery fa-3x"></i>
                             <span>Menu</span>
                         </a>
@@ -49,16 +56,11 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1 class="site-title">
-                                    <a href="/">
-                                        <img src="/images/logo.png" alt="Al's Beef Dubai" title="Al's Beef Dubai" />
-                                    </a>
-                                </h1>
 
-                                <div class="Search__container pull-right">
+                                <div class="TopNav pull-right">
                                     <nav class="cl-effect-5">
-                                        <a href="#"><span data-hover="Home">Home</span></a>
-                                        <a href="#"><span data-hover="Menu">Menu</span></a>
+                                        <a href="{{ route('home') }}"><span data-hover="Home">Home</span></a>
+                                        <a href="{{ route('menu') }}"><span data-hover="Menu">Menu</span></a>
                                         <a href="#"><span data-hover="Stores">Stores</span></a>
                                         <a href="#"><span data-hover="About">About</span></a>
                                         <a href="#"><span data-hover="Contact">Contact</span></a>

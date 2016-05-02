@@ -34,7 +34,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 150px;
+    width: 125px;
 }
 
 #page-content-wrapper {
@@ -53,7 +53,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 150px;
+    width: 125px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -93,7 +93,7 @@
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 150px;
+        padding-left: 125px;
     }
 
     #wrapper.toggled {
@@ -101,7 +101,7 @@
     }
 
     #sidebar-wrapper {
-        width: 150px;
+        width: 125px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -129,6 +129,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        &:first-child {
+            margin-top: 20px;
+        }
         a {
             color: #ddd;
             i {

@@ -1,5 +1,6 @@
 body {
 	font-family: 'Lato';
+	background: url('../../images/texture-bg.jpg') repeat;
 }
 
 .margin-top-20 {
@@ -9,24 +10,15 @@ body {
 header {
 	position: relative;
 	z-index: 9999;
-	h1 {
-		margin: 0;
-		padding-top: 20px;
-	}
-
-	.Search__container {
-		top: -30px;
+	.TopNav {
+		top: 20px;
 		position: relative;
 	}
-
-	.Search {
-		color: white;
-	}
 }
-
-
 
 @import 'components/Sidebar.scss';
 @import 'components/Nav.scss';
 @import 'components/Card.scss';
 @import 'components/Video.scss';
+@import 'components/Page.scss';
+@import 'components/Menus.scss';

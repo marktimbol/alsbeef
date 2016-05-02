@@ -20,11 +20,10 @@
     <section>
         <div class="container-fluid">
             <div class="row margin-top-20">
-                @foreach( range(1,3) as $index)
                 <div class="col-md-4 col-xs-12">
-                    <div class="Card">
+                    <div class="Card Card--text-inside">
                         <div class="Card__image">
-                            <img src="/images/promo.jpg" alt="" title="" class="img-responsive" />
+                            <img src="/images/appreciation.jpg" alt="" title="" class="img-responsive" />
                         </div>
                         <div class="Card__content">
                             <h3 class="Card__title">Loyalty Program</h3>
@@ -38,12 +37,47 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="Card Card--text-inside">
+                        <div class="Card__image">
+                            <img src="/images/giftcards.jpg" alt="" title="" class="img-responsive" />
+                        </div>
+                        <div class="Card__content">
+                            <h3 class="Card__title">Gift Cards</h3>
+                            <p class="Card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            </p>
+
+                            <div class="Card__action">
+                                <a href="#" class="btn btn-link">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="Card Card--text-inside">
+                        <div class="Card__image">
+                            <img src="/images/slams.jpg" alt="" title="" class="img-responsive" />
+                        </div>
+                        <div class="Card__content">
+                            <h3 class="Card__title">Meet the Slams</h3>
+                            <p class="Card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            </p>
+
+                            <div class="Card__action">
+                                <a href="#" class="btn btn-link">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row margin-top-20">
                 <div class="col-md-12">
-                    <div class="Card">
+                    <div class="Card Card--text-inside">
                         <div class="Card__image">
                             <img src="/images/diversity.jpg" alt="" title="" class="img-responsive" />
                         </div>

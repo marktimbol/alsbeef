@@ -7,7 +7,12 @@
                 <div class="Page__header">  
                     <div class="form-group">
                         <label>What are you looking for?</label>
-                        <input type="text" name="search" class="form-control input-lg" placeholder="Sandwich, Burger, Hot Dogs" />
+                        <div class="input--with-icon">
+                            <input type="text" name="search" class="form-control input-lg" placeholder="Sandwich, Burger, Hot Dogs" />
+                            <button>
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

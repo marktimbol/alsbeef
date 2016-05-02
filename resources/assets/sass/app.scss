@@ -8,6 +8,18 @@ body {
 	margin-top: 20px;
 }
 
+.input--with-icon {
+	position: relative;
+
+	button {
+		right: 10px;
+		top: 10px;
+		border: none;
+		background: none;
+		position: absolute;
+	}
+}
+
 header {
 	position: relative;
 	z-index: 9999;

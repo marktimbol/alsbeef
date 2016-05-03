@@ -28,14 +28,19 @@ elixir(function(mix) {
             'Video.js'
         ], 'public/js/video.js')
 
+        .scripts([
+            bowersPath + 'typeahead.js/dist/typeahead.jquery.js',
+        ], 'public/js/typeahead.js')
+
         .browserify('Menus.js')
 
     	.copy('bower_components/bootstrap/dist/fonts', 'public/build/fonts')
 
     	.version([
     		'public/css/app.css',
-    		'public/js/app.js',
+            'public/js/app.js',
 
+    		'public/js/typeahead.js',
             'public/js/video.js',
 
     	]);

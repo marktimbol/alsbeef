@@ -37,10 +37,11 @@ footer {
     background: #333;
 }
 
-@import 'components/Sidebar.scss';
-@import 'components/Nav.scss';
-@import 'components/Card.scss';
-@import 'components/Video.scss';
-@import 'components/Page.scss';
-@import 'components/Menus.scss';
-@import 'components/Overwrite.scss';
+@import 'components/Sidebar';
+@import 'components/Nav';
+@import 'components/Card';
+@import 'components/Video';
+@import 'components/Page';
+@import 'components/Menus';
+@import 'components/Typeahead';
+@import 'components/Overwrite';

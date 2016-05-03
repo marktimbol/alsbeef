@@ -26865,13 +26865,46 @@ var Menus = _react2.default.createClass({
 	displayName: 'Menus',
 	getInitialState: function getInitialState() {
 		return {
+			search: '',
 			menus: window.menus
 		};
 	},
 	handleChange: function handleChange(e) {
-		index.search(e.target.value, function searchDone(error, result) {
+		this.setState({
+			search: e.target.value
+		});
+	},
+	onSearch: function onSearch(e) {
+		e.preventDefault();
+		index.search(this.state.search, function searchDone(error, result) {
 			this.setState({
 				menus: result.hits
+			});
+		}.bind(this));
+	},
+	componentDidMount: function componentDidMount() {
+		this.enableTypeahead();
+	},
+	enableTypeahead: function enableTypeahead() {
+		$('.typeahead').typeahead({
+			minLength: 2,
+			highlight: true,
+			hint: false
+		}, {
+			name: 'menus',
+			source: index.ttAdapter(),
+			displayKey: 'name',
+			templates: {
+				notFound: function notFound() {
+					return '\n\t\t\t\t\t\t\t<div class="Suggestion--no-result">\n\t\t\t\t\t\t\t\t<p>No item(s) found.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t';
+				},
+				suggestion: function suggestion(hit) {
+					return '\n\t\t\t\t\t\t<div class="Suggestion">\n\t\t\t\t\t\t\t<div class="Suggestion__figure">\n\t\t\t\t\t\t\t\t<img src=\'/images/menus/bacon.jpg\' class="img-responsive" alt=' + hit.name + ' title=' + hit.name + ' />\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<div class="Suggestion__content">\n\t\t\t\t\t\t\t\t<h3 class="Suggestion__heading">' + hit._highlightResult.name.value + '</h3>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t';
+				}
+			}
+		}).on('typeahead:select', function (e, suggestion) {
+			this.setState({
+				search: suggestion.name
 			});
 		}.bind(this));
 	},
@@ -26889,7 +26922,7 @@ var Menus = _react2.default.createClass({
 				_react2.default.createElement(
 					'div',
 					{ className: 'Page__header' },
-					_react2.default.createElement(_SearchMenu2.default, { handleChange: this.handleChange })
+					_react2.default.createElement(_SearchMenu2.default, { handleChange: this.handleChange, onSearch: this.onSearch })
 				)
 			),
 			_react2.default.createElement(
@@ -26936,6 +26969,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Menu = _react2.default.createClass({
     displayName: "Menu",
     render: function render() {
+        var url = "/menus/" + this.props.menu.id;
         return _react2.default.createElement(
             "div",
             { className: "col-md-4 col-xs-12" },
@@ -26944,11 +26978,14 @@ var Menu = _react2.default.createClass({
                 { className: "Card" },
                 _react2.default.createElement(
                     "a",
-                    { href: "#", className: "Card__link" },
+                    { href: url, className: "Card__link" },
                     _react2.default.createElement(
                         "div",
                         { className: "Card__image" },
-                        _react2.default.createElement("img", { src: "/images/menus/bacon.jpg", alt: "", title: "", className: "img-responsive" })
+                        _react2.default.createElement("img", { src: "/images/menus/bacon.jpg",
+                            alt: this.props.menu.name,
+                            title: this.props.menu.name,
+                            className: "img-responsive" })
                     ),
                     _react2.default.createElement(
                         "div",
@@ -26984,24 +27021,28 @@ var SearchMenu = _react2.default.createClass({
     displayName: "SearchMenu",
     render: function render() {
         return _react2.default.createElement(
-            "div",
-            { className: "form-group" },
-            _react2.default.createElement(
-                "label",
-                null,
-                "What are you looking for?"
-            ),
+            "form",
+            { onSubmit: this.props.onSearch },
             _react2.default.createElement(
                 "div",
-                { className: "input--with-icon" },
-                _react2.default.createElement("input", { type: "text",
-                    className: "form-control input-lg",
-                    placeholder: "Sandwich, Burger, Hot Dogs",
-                    onChange: this.props.handleChange }),
+                { className: "form-group" },
                 _react2.default.createElement(
-                    "button",
+                    "label",
                     null,
-                    _react2.default.createElement("i", { className: "fa fa-search" })
+                    "What are you looking for?"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "input--with-icon" },
+                    _react2.default.createElement("input", { type: "text",
+                        className: "typeahead form-control input-lg",
+                        placeholder: "Sandwich, Burger, Hot Dogs",
+                        onChange: this.props.handleChange }),
+                    _react2.default.createElement(
+                        "button",
+                        { onClick: this.props.onSearch },
+                        _react2.default.createElement("i", { className: "fa fa-search" })
+                    )
                 )
             )
         );

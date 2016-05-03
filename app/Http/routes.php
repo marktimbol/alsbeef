@@ -21,6 +21,7 @@ Route::get('/menus/{menus}', ['as' => 'menus.show', 'uses' => 'MenusController@s
 Route::auth();
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
+	Route::get('/', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
 	Route::resource('menus', 'Dashboard\MenusController');
 });
 

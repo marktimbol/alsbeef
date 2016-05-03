@@ -22,7 +22,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Menu::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
+        'name' => $faker->sentence,
         'slug'	=> $faker->slug,
         'description'	=> $faker->paragraph,
     ];

@@ -28,6 +28,8 @@ elixir(function(mix) {
             'Video.js'
         ], 'public/js/video.js')
 
+        .browserify('Menus.js')
+
     	.copy('bower_components/bootstrap/dist/fonts', 'public/build/fonts')
 
     	.version([

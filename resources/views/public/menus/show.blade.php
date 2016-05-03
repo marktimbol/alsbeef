@@ -5,9 +5,9 @@
         <div class="Parallax">
             <div class="Page__header--bg Parallax__item">
                 <div class="Page__header">  
-                    <h2 class="Page__header--title">Italian Beef Sandwich</h2>
+                    <h2 class="Page__header--title">{{ $menu->name }}</h2>
                     <p class="lead">
-                        Al's beef is dry roasted in a secret recipe blend of 100% pure spices and natural juices. Our beef is pure.  The Au Jus or Gravy as Al calls it, is where all of our flavors are soaking with the beef.
+                        {{ str_limit($menu->description, 200) }}
                     </p>
                 </div>
             </div>
@@ -41,15 +41,15 @@
                     </div>
 
                     <div class="Menus">
-                        @foreach( range(1, 4) as $index )
+                        @foreach( $related as $relatedItem )
                         <div class="col-md-3 col-xs-6">
                             <div class="Card">
-                                <a href="{{ route('menus.show', 1) }}" class="Card__link">
+                                <a href="{{ route('menus.show', $relatedItem->id) }}" class="Card__link">
                                     <div class="Card__image">
                                         <img src="/images/menus/bacon.jpg" alt="" title="" class="img-responsive" />
                                     </div>
                                     <div class="Card__content">
-                                        <h3 class="Card__title">NEW! Al's Italian Beef</h3>
+                                        <h3 class="Card__title">{{ $relatedItem->name }}</h3>
                                     </div>
                                 </a>
                             </div>

@@ -44,10 +44,11 @@
 }
 
 .Page__content {
-    padding: 40px 20px;	
+    padding: 30px;
 }
 
 .Page__subtitle {
+	font-size: 30px;
 	margin: 40px 0px;
 }
 
@@ -60,4 +61,13 @@
     height: 25vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+.Related {
+	.Page__subtitle {
+		margin-bottom: 10px;
+	}
+	.lead {
+		margin-bottom: 40px;
+	}
 }

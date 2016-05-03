@@ -1,3 +1,5 @@
+$yellow: #FFF400;
+
 body {
 	font-size: 16px;
 	font-family: 'Lato';
@@ -41,3 +43,4 @@ footer {
 @import 'components/Video.scss';
 @import 'components/Page.scss';
 @import 'components/Menus.scss';
+@import 'components/Overwrite.scss';

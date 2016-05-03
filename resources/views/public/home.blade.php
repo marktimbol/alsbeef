@@ -86,7 +86,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             </p>
                             <div class="Card__action">
-                                <a href="#" class="btn btn-link">Learn More</a>
+                                <a href="{{ route('about') }}" class="btn btn-link">Learn More</a>
                             </div>
                         </div>
                     </div>

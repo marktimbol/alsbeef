@@ -24,7 +24,22 @@
                 <div class="row Page__content">
                     <div class="col-md-9">
                         @foreach( range(1, 5) as $index)
-                        <h3 class="Page__subtitle">Subtitle</h3>
+                        <h3 class="Page__subtitle">Jumeirah Beach Road (JBR)</h3>
+                        <address>
+                            <p>
+                                <strong>Phone:</strong>
+                                +971 341 2922
+                            </p>
+                            <p>
+                                <strong>E-Mail:</strong>
+                                <a href="mailto:jumeirah@alsbeef.ae">jumeirah@alsbeef.ae</a>
+                            </p>
+                            <p>
+                                <strong>Address:</strong>
+                                Umm Suqeim 2, Jumeirah Street Corner of Ja'rada Street,<br />
+                                Opposite Samba Bank, Dubai, United Arab Emirates
+                            </p>
+                        </address>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

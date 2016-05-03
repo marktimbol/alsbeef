@@ -23,35 +23,51 @@
             <div class="container-fluid">
                 <div class="row Page__content">
                     <div class="col-md-9">
-                        @foreach( range(1, 5) as $index)
-                        <h3 class="Page__subtitle">Subtitle</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <h3 class="Page__subtitle">General Inquiries</h3>
+                        <p class="lead">
+                           We welcome your suggestions. Please send us your questions, feedback and comments.
                         </p>
+                        <form method="POST">
+                            {!! csrf_field() !!}
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" 
+                                    id="name" class="form-control"
+                                    placeholder="Full Name" />
+                            </div>
 
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" name="phone" 
+                                    id="phone" class="form-control"
+                                    placeholder="+971 00 000 0000" />
+                            </div>                  
 
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        @endforeach
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" 
+                                    id="email" class="form-control"
+                                    placeholder="your@email.com" />
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea name="message_content" 
+                                    id="message" class="form-control" rows="10">
+                                </textarea>
+                            </div>
+                            
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Send
+                                </button>
+                                <button type="reset" class="btn btn-default btn-lg">
+                                    Clear
+                                </button>
+                            </div>
+                        </form>
                     </div>
                     <div class="col-md-3">
 

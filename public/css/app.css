@@ -6810,7 +6810,7 @@ footer {
   margin-left: -250px;
   overflow-y: auto;
   background: #000;
-  border-right: 10px solid #FFF400;
+  border-right: 5px solid #FFF400;
   transition: all 0.5s ease; }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -7032,8 +7032,8 @@ nav a:focus {
   position: absolute;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  border-right: 2px solid yellow;
-  border-bottom: 2px solid yellow; }
+  border-right: 2px solid #FFF400;
+  border-bottom: 2px solid #FFF400; }
 
 .Video__intro {
   height: 100%;
@@ -7052,9 +7052,7 @@ nav a:focus {
   -ms-flex-pack: center;
   justify-content: center; }
   .Video__intro--content img {
-    width: 80%;
-    padding: 50px;
-    border: 3px solid yellow; }
+    width: 80%; }
 
 .Page {
   margin-top: -21px; }
@@ -7102,9 +7100,10 @@ nav a:focus {
   margin: 30px 0px; }
 
 .Page__content {
-  padding: 40px 20px; }
+  padding: 30px; }
 
 .Page__subtitle {
+  font-size: 30px;
   margin: 40px 0px; }
 
 .Parallax__item {
@@ -7113,8 +7112,22 @@ nav a:focus {
   background-attachment: fixed;
   background-repeat: no-repeat; }
 
+.Related .Page__subtitle {
+  margin-bottom: 10px; }
+
+.Related .lead {
+  margin-bottom: 40px; }
+
 .Menus .Card {
   margin-bottom: 70px; }
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.8em; }
+
+.btn {
+  border-radius: 3px;
+  padding: 10px 50px; }
 
 /*# sourceMappingURL=app.css.map */
 

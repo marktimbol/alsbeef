@@ -11,21 +11,14 @@ const index = client.initIndex('alsbeef_menus');
 const Menus = React.createClass({
 	getInitialState() {
 		return {
-			search: '',
 			menus: window.menus,
 		}
 	},
 
-	handleChange(e) {
-		this.setState({
-			search: e.target.value
-		});
-	},
 
-	onSearch(e)
+	onSearch(needle)
 	{
-		e.preventDefault();
-		index.search(this.state.search, function searchDone(error, result) {
+		index.search(needle, function searchDone(error, result) {
 			this.setState({
 				menus: result.hits
 			});
@@ -74,10 +67,8 @@ const Menus = React.createClass({
 			}
 		})
 		.on('typeahead:select', function(e, suggestion) {
-			this.setState({
-				search: suggestion.name
-			});
-		}.bind(this))
+			window.location.href = `/menus/${suggestion.id}`;
+		})
 	},
 
 	render() {
@@ -91,7 +82,9 @@ const Menus = React.createClass({
 			<div>
 	            <div className="Page__header--bg Parallax__item">
 	                <div className="Page__header">  
-	                	<SearchMenu handleChange={this.handleChange} onSearch={this.onSearch} />
+	                	<SearchMenu 
+	                		handleChange={this.handleChange} 
+	                		onSearch={this.onSearch} />
 	                </div>
 	            </div>
 

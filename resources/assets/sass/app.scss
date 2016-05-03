@@ -37,6 +37,10 @@ footer {
     background: #333;
 }
 
+.no-radius {
+	border-radius: 0;
+}
+
 @import 'components/Sidebar';
 @import 'components/Nav';
 @import 'components/Card';

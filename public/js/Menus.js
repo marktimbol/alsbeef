@@ -26865,18 +26865,11 @@ var Menus = _react2.default.createClass({
 	displayName: 'Menus',
 	getInitialState: function getInitialState() {
 		return {
-			search: '',
 			menus: window.menus
 		};
 	},
-	handleChange: function handleChange(e) {
-		this.setState({
-			search: e.target.value
-		});
-	},
-	onSearch: function onSearch(e) {
-		e.preventDefault();
-		index.search(this.state.search, function searchDone(error, result) {
+	onSearch: function onSearch(needle) {
+		index.search(needle, function searchDone(error, result) {
 			this.setState({
 				menus: result.hits
 			});
@@ -26903,10 +26896,8 @@ var Menus = _react2.default.createClass({
 				}
 			}
 		}).on('typeahead:select', function (e, suggestion) {
-			this.setState({
-				search: suggestion.name
-			});
-		}.bind(this));
+			window.location.href = '/menus/' + suggestion.id;
+		});
 	},
 	render: function render() {
 		var menus = this.state.menus.map(function (menu) {
@@ -26922,7 +26913,9 @@ var Menus = _react2.default.createClass({
 				_react2.default.createElement(
 					'div',
 					{ className: 'Page__header' },
-					_react2.default.createElement(_SearchMenu2.default, { handleChange: this.handleChange, onSearch: this.onSearch })
+					_react2.default.createElement(_SearchMenu2.default, {
+						handleChange: this.handleChange,
+						onSearch: this.onSearch })
 				)
 			),
 			_react2.default.createElement(
@@ -27005,45 +26998,73 @@ var Menu = _react2.default.createClass({
 exports.default = Menu;
 
 },{"react":256}],259:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SearchMenu = _react2.default.createClass({
-    displayName: "SearchMenu",
-    render: function render() {
+    displayName: 'SearchMenu',
+    getInitialState: function getInitialState() {
+        return {
+            search: ''
+        };
+    },
+    handleChange: function handleChange(e) {
+        this.setState({
+            search: e.target.value
+        });
+    },
+    onSubmit: function onSubmit(e) {
+        e.preventDefault();
+        this.props.onSearch(this.state.search);
+    },
+    onClear: function onClear() {
+        this.setState({
+            search: ''
+        });
+    },
+    showSearchButton: function showSearchButton() {
         return _react2.default.createElement(
-            "form",
-            { onSubmit: this.props.onSearch },
+            'button',
+            { onClick: this.onSubmit },
+            _react2.default.createElement('i', { className: 'fa fa-search' })
+        );
+    },
+    showClearButton: function showClearButton() {
+        return _react2.default.createElement(
+            'button',
+            { onClick: this.onClear },
+            _react2.default.createElement('i', { className: 'fa fa-times' })
+        );
+    },
+    render: function render() {
+        var button = this.state.search == '' ? this.showSearchButton() : this.showClearButton();
+
+        return _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
             _react2.default.createElement(
-                "div",
-                { className: "form-group" },
-                _react2.default.createElement(
-                    "label",
-                    null,
-                    "What are you looking for?"
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "input--with-icon" },
-                    _react2.default.createElement("input", { type: "text",
-                        className: "typeahead form-control input-lg",
-                        placeholder: "Sandwich, Burger, Hot Dogs",
-                        onChange: this.props.handleChange }),
-                    _react2.default.createElement(
-                        "button",
-                        { onClick: this.props.onSearch },
-                        _react2.default.createElement("i", { className: "fa fa-search" })
-                    )
-                )
+                'label',
+                null,
+                'What are you looking for?'
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'input--with-icon' },
+                _react2.default.createElement('input', { type: 'text',
+                    className: 'typeahead form-control input-lg no-radius',
+                    value: this.state.search,
+                    placeholder: 'Sandwich, Burger, Hot Dogs',
+                    onChange: this.handleChange }),
+                button
             )
         );
     }

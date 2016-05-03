@@ -12,6 +12,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	.form-group {
 		width: 40%;
 		text-align: center;
@@ -22,6 +23,12 @@
 			margin-bottom: 20px;
 			text-shadow: 1px 1px 3px #333;
 		}
+	}
+	.lead {
+		color: white;
+		width: 80%;
+		text-align: center;
+		text-shadow: 1px 1px 3px #333;
 	}
 }
 
@@ -38,6 +45,10 @@
 
 .Page__content {
     padding: 40px 20px;	
+}
+
+.Page__subtitle {
+	margin: 40px 0px;
 }
 
 .Parallax {

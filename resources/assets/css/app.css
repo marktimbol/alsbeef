@@ -22,6 +22,11 @@ header {
     top: 20px;
     position: relative; }
 
+footer {
+  height: 300px;
+  padding: 20px;
+  background: #333; }
+
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -44,6 +49,7 @@ header {
   margin-left: -250px;
   overflow-y: auto;
   background: #000;
+  border-right: 10px solid #FFF400;
   transition: all 0.5s ease; }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -306,7 +312,10 @@ nav a:focus {
   align-items: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   .Page__header .form-group {
     width: 40%;
     text-align: center; }
@@ -316,6 +325,11 @@ nav a:focus {
       text-transform: uppercase;
       margin-bottom: 20px;
       text-shadow: 1px 1px 3px #333; }
+  .Page__header .lead {
+    color: white;
+    width: 80%;
+    text-align: center;
+    text-shadow: 1px 1px 3px #333; }
 
 .Page__header--title {
   color: white;
@@ -328,6 +342,9 @@ nav a:focus {
 
 .Page__content {
   padding: 40px 20px; }
+
+.Page__subtitle {
+  margin: 40px 0px; }
 
 .Parallax__item {
   position: relative;

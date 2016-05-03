@@ -11,67 +11,15 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
         <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+        @yield('header_styles')
     </head>
     <body>
-
         <div id="wrapper">
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li>
-                        <h1 class="site-title">
-                            <a href="{{ route('home') }}">
-                                <img src="/images/logo.png" alt="Al's Beef Dubai" title="Al's Beef Dubai" />
-                            </a>
-                        </h1>
-                    </li>
-                    <li>
-                        <a href="{{ route('menus.index') }}">
-                            <i class="fa fa-cutlery fa-3x"></i>
-                            <span>Menu</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-map-marker fa-3x"></i>
-                            <span>Stores</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-info fa-3x"></i>
-                            <span>About</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-phone fa-3x"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
+            @include('layouts._sidebar')
             <div id="page-content-wrapper">
-                <header>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-
-                                <div class="TopNav pull-right">
-                                    <nav class="cl-effect-5">
-                                        <a href="{{ route('home') }}"><span data-hover="Home">Home</span></a>
-                                        <a href="{{ route('menus.index') }}"><span data-hover="Menu">Menu</span></a>
-                                        <a href="#"><span data-hover="Stores">Stores</span></a>
-                                        <a href="#"><span data-hover="About">About</span></a>
-                                        <a href="#"><span data-hover="Contact">Contact</span></a>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-
+                @include('layouts._header')
                 @yield('content')   
+                @include('layouts._footer')
             </div>
         </div>
 

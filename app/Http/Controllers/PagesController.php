@@ -13,4 +13,16 @@ class PagesController extends Controller
     	$pageTitle = 'Home';
     	return view('public.home', compact('pageTitle'));
     }
+
+    public function about()
+    {
+    	$pageTitle = 'About Us';
+    	return view('public.about', compact('pageTitle'));
+    }
+
+    public function contact()
+    {
+        $pageTitle = 'Contact Us';
+        return view('public.contact', compact('pageTitle'));
+    }
 }

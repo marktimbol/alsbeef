@@ -12,6 +12,9 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
+Route::get('/about', ['as' => 'about', 'uses' => 'PagesController@about']);
+Route::get('/contact', ['as' => 'contact', 'uses' => 'PagesController@contact']);
+Route::get('/stores', ['as' => 'stores.index', 'uses' => 'StoresController@index']);
 Route::get('/menus', ['as' => 'menus.index', 'uses' => 'MenusController@index']);
 Route::get('/menus/{menus}', ['as' => 'menus.show', 'uses' => 'MenusController@show']);
 

@@ -2,8 +2,8 @@
 @section('header_styles')
     <style>
         .Page__header--bg {
-            background-image: url('../../images/store.jpg');
-            background-position: 0px -400px;
+            background-image: url('../../images/about.jpg');
+            background-position: 0px -150px;
         }
     </style>
 @endsection 

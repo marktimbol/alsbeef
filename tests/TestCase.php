@@ -2,6 +2,8 @@
 
 class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
+    protected $user;
+
     /**
      * The base URL to use while testing the application.
      *
@@ -21,5 +23,11 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
         $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 
         return $app;
+    }
+
+    public function signIn()
+    {
+        $this->user = factory(App\User::class)->create();
+        $this->actingAs($this->user);
     }
 }

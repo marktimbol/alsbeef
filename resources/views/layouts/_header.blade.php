@@ -19,6 +19,9 @@
                         <a href="{{ route('contact') }}">
                             <span data-hover="Contact">Contact</span>
                         </a>
+                        <a href="/login">
+                            <span data-hover="Login">Login</span>
+                        </a>
                     </nav>
                 </div>
             </div>

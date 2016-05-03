@@ -18,8 +18,9 @@ Route::get('/stores', ['as' => 'stores.index', 'uses' => 'StoresController@index
 Route::get('/menus', ['as' => 'menus.index', 'uses' => 'MenusController@index']);
 Route::get('/menus/{menus}', ['as' => 'menus.show', 'uses' => 'MenusController@show']);
 
-/**
- * Auth
- */
 Route::auth();
-Route::get('/home', 'HomeController@index');
+
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
+	Route::resource('menus', 'Dashboard\MenusController');
+});
+

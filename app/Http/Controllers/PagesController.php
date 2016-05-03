@@ -25,4 +25,10 @@ class PagesController extends Controller
         $pageTitle = 'Contact Us';
         return view('public.contact', compact('pageTitle'));
     }
+
+    public function media()
+    {
+        $pageTitle = 'Media';
+        return view('public.media', compact('pageTitle'));
+    }
 }

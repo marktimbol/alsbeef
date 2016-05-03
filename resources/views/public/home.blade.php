@@ -26,13 +26,13 @@
                             <img src="/images/appreciation.jpg" alt="" title="" class="img-responsive" />
                         </div>
                         <div class="Card__content">
-                            <h3 class="Card__title">Loyalty Program</h3>
+                            <h3 class="Card__title">Lorem Ipsum</h3>
                             <p class="Card__description">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             </p>
 
                             <div class="Card__action">
-                                <a href="#" class="btn btn-link">Sign Up</a>
+                                <a href="#" class="btn btn-link">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -44,13 +44,13 @@
                             <img src="/images/giftcards.jpg" alt="" title="" class="img-responsive" />
                         </div>
                         <div class="Card__content">
-                            <h3 class="Card__title">Gift Cards</h3>
+                            <h3 class="Card__title">Lorem Ipsum</h3>
                             <p class="Card__description">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             </p>
 
                             <div class="Card__action">
-                                <a href="#" class="btn btn-link">Order Now</a>
+                                <a href="#" class="btn btn-link">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -62,13 +62,13 @@
                             <img src="/images/slams.jpg" alt="" title="" class="img-responsive" />
                         </div>
                         <div class="Card__content">
-                            <h3 class="Card__title">Meet the Slams</h3>
+                            <h3 class="Card__title">Lorem Ipsum</h3>
                             <p class="Card__description">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             </p>
 
                             <div class="Card__action">
-                                <a href="#" class="btn btn-link">Watch Now</a>
+                                <a href="#" class="btn btn-link">Learn More</a>
                             </div>
                         </div>
                     </div>

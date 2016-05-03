@@ -30,6 +30,19 @@ footer {
 .no-radius {
   border-radius: 0; }
 
+.Video__container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  .Video__container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -336,6 +349,8 @@ nav a:focus {
 .Page__header--title {
   color: white;
   font-size: 60px;
+  width: 80%;
+  text-align: center;
   text-shadow: 1px 1px 3px #333; }
 
 .Page__title {

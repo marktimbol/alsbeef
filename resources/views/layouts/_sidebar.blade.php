@@ -20,6 +20,12 @@
             </a>
         </li>
         <li>
+            <a href="{{ route('media') }}">
+                <i class="fa fa-play fa-3x"></i>
+                <span>Media</span>
+            </a>
+        </li>
+        <li>
             <a href="{{ route('about') }}">
                 <i class="fa fa-info fa-3x"></i>
                 <span>About</span>

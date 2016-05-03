@@ -13,6 +13,9 @@
                         <a href="{{ route('stores.index') }}">
                             <span data-hover="Stores">Stores</span>
                         </a>
+                        <a href="{{ route('media') }}">
+                            <span data-hover="Media">Media</span>
+                        </a>
                         <a href="{{ route('about') }}">
                             <span data-hover="About">About</span>
                         </a>
